@@ -41,4 +41,29 @@ terraform.rc
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
 
+# logs
+*.log
+
+# Directories
+.terraform/
+.vagrant/
+
+# SSH Keys
+*.pem
+
+# Backup files
+*.bak
+
+# Ignored Terraform files
+*gitignore*.tf
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
+# Ignored vscode files
+.vscode/
