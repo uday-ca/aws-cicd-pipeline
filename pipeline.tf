@@ -17,7 +17,7 @@ resource "aws_codebuild_project" "trz-tf-plan" {
     #registry_credential{
     #    credential = var.dockerhub_credentials
     #    credential_provider = "SECRETS_MANAGER"
-    }
+    #}
  }
  source {
      type   = "CODEPIPELINE"
@@ -44,7 +44,7 @@ resource "aws_codebuild_project" "trz-tf-apply" {
     #registry_credential{
     #    credential = var.dockerhub_credentials
     #    credential_provider = "SECRETS_MANAGER"
-    }
+    #}
  }
  source {
      type   = "CODEPIPELINE"
