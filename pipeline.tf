@@ -15,10 +15,10 @@ resource "aws_codebuild_project" "trz-tf-plan" {
     type                        = "LINUX_CONTAINER"
     #image_pull_credentials_type = "SERVICE_ROLE"
     image_pull_credentials_type = "CODEBUILD"
-    #registry_credential{
-    #    credential = var.dockerhub_credentials
-    #    credential_provider = "SECRETS_MANAGER"
-    #}
+    registry_credential{
+        credential = var.dockerhub_credentials
+        credential_provider = "SECRETS_MANAGER"
+    }
  }
  source {
      type   = "CODEPIPELINE"
@@ -43,10 +43,10 @@ resource "aws_codebuild_project" "trz-tf-apply" {
     type                        = "LINUX_CONTAINER"
     #image_pull_credentials_type = "SERVICE_ROLE"
     image_pull_credentials_type = "CODEBUILD"
-    #registry_credential{
-    #    credential = var.dockerhub_credentials
-    #    credential_provider = "SECRETS_MANAGER"
-    #}
+    registry_credential{
+        credential = var.dockerhub_credentials
+        credential_provider = "SECRETS_MANAGER"
+    }
  }
  source {
      type   = "CODEPIPELINE"
