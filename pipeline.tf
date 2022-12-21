@@ -1,5 +1,5 @@
 resource "aws_codebuild_project" "trz-tf-plan" {
-  name          = "trz-tf-cicd-plan2"
+  name          = "trz-tf-cicd-plan"
   description   = "Plan stage for terraform11"
   service_role  = aws_iam_role.trz-tf-codebuild-role.arn
 
