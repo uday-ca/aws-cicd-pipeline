@@ -13,8 +13,8 @@ resource "aws_codebuild_project" "trz-tf-plan" {
     #image                       = "aws/codebuild/standard:2.0"
     image                       = "public.ecr.aws/hashicorp/terraform:latest"
     type                        = "LINUX_CONTAINER"
-    #image_pull_credentials_type = "SERVICE_ROLE"
-    image_pull_credentials_type = "CODEBUILD"
+    image_pull_credentials_type = "SERVICE_ROLE"
+    #image_pull_credentials_type = "CODEBUILD"
     registry_credential{
         credential = var.dockerhub_credentials
         credential_provider = "SECRETS_MANAGER"
@@ -41,8 +41,8 @@ resource "aws_codebuild_project" "trz-tf-apply" {
     #image                       = "aws/codebuild/standard:2.0"
     image                       = "public.ecr.aws/hashicorp/terraform:latest"
     type                        = "LINUX_CONTAINER"
-    #image_pull_credentials_type = "SERVICE_ROLE"
-    image_pull_credentials_type = "CODEBUILD"
+    image_pull_credentials_type = "SERVICE_ROLE"
+    #image_pull_credentials_type = "CODEBUILD"
     registry_credential{
         credential = var.dockerhub_credentials
         credential_provider = "SECRETS_MANAGER"
