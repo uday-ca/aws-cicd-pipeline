@@ -10,7 +10,8 @@ resource "aws_codebuild_project" "trz-tf-plan" {
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
     #image                       = "hashicorp/terraform:latest"
-    image                       = "aws/codebuild/standard:2.0"
+    #image                       = "aws/codebuild/standard:2.0"
+    image                       = "public.ecr.aws/hashicorp/terraform:latest"
     type                        = "LINUX_CONTAINER"
     #image_pull_credentials_type = "SERVICE_ROLE"
     image_pull_credentials_type = "CODEBUILD"
@@ -37,8 +38,8 @@ resource "aws_codebuild_project" "trz-tf-apply" {
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
     #image                       = "hashicorp/terraform:latest"
-    image                       = "aws/codebuild/standard:2.0"
-    #image                       = "public.ecr.aws/hashicorp/terraform:latest"
+    #image                       = "aws/codebuild/standard:2.0"
+    image                       = "public.ecr.aws/hashicorp/terraform:latest"
     type                        = "LINUX_CONTAINER"
     #image_pull_credentials_type = "SERVICE_ROLE"
     image_pull_credentials_type = "CODEBUILD"
