@@ -9,12 +9,14 @@ resource "aws_codebuild_project" "trz-tf-plan" {
 
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
-    image                       = "hashicorp/terraform:latest"
+    #image                       = "hashicorp/terraform:latest"
+    image                       = "aws/codebuild/standard:2.0"
     type                        = "LINUX_CONTAINER"
-    image_pull_credentials_type = "SERVICE_ROLE"
-    registry_credential{
-        credential = var.dockerhub_credentials
-        credential_provider = "SECRETS_MANAGER"
+    #image_pull_credentials_type = "SERVICE_ROLE"
+    image_pull_credentials_type = "CODEBUILD"
+    #registry_credential{
+    #    credential = var.dockerhub_credentials
+    #    credential_provider = "SECRETS_MANAGER"
     }
  }
  source {
@@ -34,12 +36,14 @@ resource "aws_codebuild_project" "trz-tf-apply" {
 
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
-    image                       = "hashicorp/terraform:latest"
+    #image                       = "hashicorp/terraform:latest"
+    image                       = "aws/codebuild/standard:2.0"
     type                        = "LINUX_CONTAINER"
-    image_pull_credentials_type = "SERVICE_ROLE"
-    registry_credential{
-        credential = var.dockerhub_credentials
-        credential_provider = "SECRETS_MANAGER"
+    #image_pull_credentials_type = "SERVICE_ROLE"
+    image_pull_credentials_type = "CODEBUILD"
+    #registry_credential{
+    #    credential = var.dockerhub_credentials
+    #    credential_provider = "SECRETS_MANAGER"
     }
  }
  source {
