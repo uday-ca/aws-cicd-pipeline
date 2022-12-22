@@ -76,7 +76,7 @@ resource "aws_codepipeline" "trz-cicd_pipeline" {
             output_artifacts = ["trz-tf-code"]
             configuration = {
                 FullRepositoryId = "uday-ca/aws-cicd-pipeline"
-                BranchName   = "master"
+                BranchName   = "main"
                 ConnectionArn = var.codestar_connector_credentials
                 OutputArtifactFormat = "CODE_ZIP"
             }
