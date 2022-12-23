@@ -28,7 +28,7 @@ resource "aws_lambda_function" "Trz_lambda-cicd" {
     function_name = "Trz_lambda-cicd"
     filename = "${path.module}/my-deployment.zip"
 
-    runtime = "python3.7"
+    runtime = "python3.9"
     handler = "lambda_function.lambda_handler"
     memory_size = 256
 
