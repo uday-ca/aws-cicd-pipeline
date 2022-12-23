@@ -37,7 +37,7 @@ resource "aws_lambda_function" "Trz_lambda-cicd" {
     role = aws_iam_role.Trz_lambda_role.arn
     
     layers = [
-        "arn:aws:lambda:us-east-1:933195066766:layer:trz-python39-pytest-libraries:1"
+        "arn:aws:lambda:us-east-1:933195066766:layer:trz-python39-pytest-libraries:2"
     ]
 }
 resource "aws_cloudwatch_log_group" "Trz_lambda-cicd" {
